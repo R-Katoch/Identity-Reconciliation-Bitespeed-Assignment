@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 const db = new pg.Pool({
-    connectionString: process.env.postgresConnectionURL,
+    connectionString: process.env.postgresConnectionUrl,
     ssl: {
         rejectUnauthorized: false
     }

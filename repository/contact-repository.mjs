@@ -1,7 +1,9 @@
 import pg from 'pg';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const db = new pg.Pool({
-    connectionString: `postgres://contact_kj67_user:Q4P5c8iRTv1GcCL8925YCHYUfSNLcxNa@dpg-cjcf2qs5kgrc73b7221g-a.oregon-postgres.render.com/contact_kj67`,
+    connectionString: process.env.postgresConnectionURL,
     ssl: {
         rejectUnauthorized: false
     }
